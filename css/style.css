@@ -1,0 +1,357 @@
+/* IMPORTS */
+    /* FOR FONT */
+    @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap');
+
+/* VARIABLES */
+:root {
+    /* PALETTE */
+    --white: hsla(22, 36%, 96%);
+    --black: hsl(30, 35%, 9%);
+    --lightest-brown: hsla(27, 22%, 90%);
+    --lighter-brown: hsla(23, 28%, 84%);
+    --light-brown: hsla(24, 29.85%, 73.73%);
+    --brown: hsla(30, 18%, 56%);
+    --light-brown-transparent: hsla(30, 18%, 56%, 0.6);
+    --dark-brown: hsla(29, 19%, 47%);
+    --dark-brown-transparent: hsla(29, 19%, 47%, 0.6);
+    --darker-brown: hsla(29, 23%, 36%);
+    --darkest-brown: hsl(29, 29%, 24%);
+    --tint: hsla(28, 59%, 11%, 0.9);
+    --shadow: hsla(30, 33%, 4%, 0.24) 0px 2px 5px 0px, hsla(30, 33%, 4%, 0.24) 0px 1px 1px 0px;
+
+    /* MODE DEPENDENT COLORS */
+    /* IN JS: --c-property, var(--edit-color) */
+    /* --c-a: ; light mode to dark mode */
+    --c-a: var(--light-brown); /* light to dark */
+    --c-b: var(--white); /* white to black */
+    --c-c: var(--darkest-brown); /* darkest to lightest */
+    --c-d: var(--darker-brown); /* darker to lighter */
+    --c-e: var(--light-brown-transparent); /* light(t) to dark(t) */
+    --c-f: var(--brown); /* brown to light */
+
+    /* SWITCH COLORS */
+    /* light mode by default */
+    --c-bg-body: var(--c-a); 
+
+    --c-frbx-a: var(--c-e);
+
+    --c-f-body-a: var(--white);
+    --c-f-body-b: var(--lighter-brown);
+    --c-imgban-a: var(--white);
+    --c-imgban-b: var(--lighter-brown);
+
+    /* FONT */
+    --ff-base: 'Poppins', sans-serif;
+    --fs-root: calc(62.5% + .190625vw);
+    --fs-base: 1.6rem;
+    --fw-base: 400;
+    --lh-base: 1.2;
+
+    /* FONT SIZE */
+    --fs-xxl : 3rem;
+    --fs-xl: 2.5rem;
+    --fs-l: 2rem;
+    --fs-n: 1.6rem;
+    --fs-s: 1.4rem;
+    --fs-xs: 1.2rem;
+    --fs-xxs: .6rem;
+
+    /* FONT WEIGHT */
+    --fw-xh: 700;
+    --fw-h: 600;
+    --fw-n: 400;
+    --fw-l: 300;
+    --fw-xl: 200;
+
+    /* BANNER */
+    --h-flban: 75vh;
+    --h-hlban: 45vh;
+
+    /* BORDER */
+    --br-base: 10px;
+
+    /* GAP */
+    /* should be same as --lh-base */
+    --g-base: 1.2rem;
+
+    /* TEXT-INDENT */
+    --ti-base: 2rem;
+
+    /* TRANSITION */
+    --tr-base: 0.3s;
+
+    /* SECTION */
+    --m-sec: 2vw 1.5rem;
+    --w-sec: calc(100% - (2 * var(--m-sec)));
+
+    /* SPACE */
+    --p-i: calc(.2rem + .190625vw);
+
+
+    /* Z-INDEX */
+
+
+}
+
+/* ANIMATION */
+    /* :HOVER UNDERLINE */
+    .an-udl-ho { 
+        display: inline-block;
+        position: relative;
+        color: inherit;
+    }
+    .an-udl-ho:after { 
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform var(--tr-base) ease-out;
+
+        /* TODO: class:after */
+        /* background-color: var(--c-bg); */
+    }
+    .an-udl-ho:hover:after { 
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+/* ELEMENTS */
+/* to override default css element values */
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--ff-base);
+    line-height: var(--lh-base);
+    word-break: break-word;
+}
+html {
+    scroll-behavior: smooth;
+
+    font-size: var(--fs-root);
+}
+body {
+    background-color: var(--c-bg-body);
+
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+i {
+    padding: var(--p-i);
+}
+section {
+    margin: var(--m-sec);
+
+    max-height: min-content;
+    width: var(--w-sec);
+
+    border-radius: var(--br-base);
+
+    box-shadow: var(--shadow);
+}
+img {
+    max-width: 100%;
+}
+input, button {
+    border: none;
+    outline: none;
+}
+
+
+/* CLASSES */
+/* reusable classes */
+.breathe {
+    margin: var(--m-breathe);
+    height: var(--h-breathe);
+    width: var(--w-breathe);
+}
+section .main {
+    display: flex;
+    flex-direction: column;
+        /* vertical */
+    justify-content: center;
+        /* horizontal */
+    align-items: center;
+    
+    /* TODO:  */
+    /* width: var(--w) */
+}
+.fxbx-a {
+    display: flex;
+    flex-direction: row;
+        /* vertical */
+        align-items: center;
+        /* horizontal */
+        justify-content: space-between;
+}
+.fxbx-b {
+    display: flex;
+    flex-direction: column;
+        /* vertical */
+        justify-content: center;
+        /* horizontal */
+        align-items: center;
+}
+.fxbx-c {
+    display: flex;
+    flex-direction: row;
+        /* vertical */
+    align-items: center;
+        /* horizontal */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.fxbx-d {
+    display: flex;
+        /* vertical */
+        align-items: center;
+        /* horizontal */
+        justify-content: center;
+    flex-flow: wrap row;
+        align-content: center;
+}
+.fxbx-e {
+    display: flex;
+    flex-direction: row;
+        /* vertical */
+        align-items: center;
+        /* horizontal */
+        justify-content: flex-start;
+    flex-wrap: row;
+    align-content: center;
+}
+.fxbx-f {
+    display: flex;
+        /* vertical */
+        justify-content: flex-start;
+        /* horizontal */
+        align-items: flex-start;
+    flex-flow: wrap column;
+    align-content: flex-start;
+}
+.fxbx-g {
+    display: flex;
+    flex-direction: column;
+        /* vertical */
+        align-items: flex-start;
+        /* horizontal */
+        justify-content: center;
+}
+.fxbx-h {
+    display: flex;
+    flex-direction: row;
+        /* vertical */
+    align-items: flex-start;
+        /* horizontal */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.imgban { 
+    /* TODO: */
+    /* COPY AND PASTE TO AN IMGBAN SEC CLASS */
+
+    /* banner image that is centered */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    /* TODO: optional */
+    /* position: relative; */
+
+    /* TODO: */
+    /* background: var(--url); */
+}
+.imgban-sec { 
+    /* TODO: */
+    /* RENAME CLASS TO SEC-X */
+
+    /* banner image that is centered with minimum height of n */
+
+    /* TODO: */
+    /* background: var(--url); */
+
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* TODO: */
+    /* padding: var(--p-sec-x); */
+
+    /* TODO: */
+    /* min-height: var(--h-flban); */
+}
+
+.tt-imgban { 
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-xh);
+    color: var(--c-imgban-a);
+}
+.stt-imgban { 
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-h);
+    color: var(--c-imgban-a);
+}
+.tx-imgban { 
+    font-size: var(--fs-s);
+    font-weight: var(--fw-n);
+    color: var(--c-imgban-b);
+}
+.stx-imgban { 
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-n);
+    color: var(--c-imgban-b);
+}
+.tt-a {
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-xh);
+    color: var(--c-f-body-a);
+}
+.stt-a {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-h);
+    color: var(--c-f-body-a);
+}
+.tx-a {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-n);
+    color: var(--c-f-body-b);
+}
+
+/* SMALLER THAN SMALL CP */
+@media screen and (max-width: 319px) {
+    /* ** ROOT ** */
+    html { 
+        font-size: 8px;
+    }
+}
+
+/* SMALLER THAN LARGE CP */
+@media screen and (max-width: 425px) {
+}
+
+/* SMALLER THAN TABLET */
+@media screen and (max-width: 767px) {
+}
+
+/* BIGGER THAN TABLET */
+@media screen and (min-width: 768px) {
+    .breathe.breathe-b {
+        display: none;
+    }
+}

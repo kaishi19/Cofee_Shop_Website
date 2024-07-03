@@ -1,0 +1,179 @@
+/* VARIABLES */
+:root {
+	/* BACKGROUND IMAGE URLS */
+	--url-bg-sec-a: linear-gradient(hsla(28, 59%, 11%, 0.7), hsla(28, 59%, 11%, 0.7)), url(https://joelbrandman.com/wp-content/uploads/2020/08/CoffeePour.gif);
+}
+
+/* ELEMENTS & CLASSES */
+.sec-a {
+	background-image: var(--url-bg-sec-a);
+	background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+	min-height: var(--h-flban);
+}
+.atl-a {
+	gap: var(--g-base);
+
+	z-index: 1;
+}
+.atl-a p {
+	color: var(--c-a);
+	text-indent: var(--ti-base);
+}
+.imbx-a img {
+	filter: brightness(80%) contrast(105%);
+}
+
+/* SMALLER THAN SMALL CP */
+@media screen and (max-width: 319px) {
+
+}
+
+/* SMALLER THAN LARGE CP */
+@media screen and (max-width: 425px) {
+
+}
+
+/* SMALLER THAN TABLET */
+@media screen and (max-width: 767px) {
+	.main-main {
+		padding: 10vh 0;
+
+		display: flex;
+		flex-direction: column;
+			/* vertical */
+			justify-content: space-between;
+			/* horizontal */
+			align-items: center;
+	}
+	/* ANIMATION */
+		/* ARTICLE IMAGE AUTO SLIDE TRANSITION */
+		.imbx-a {
+			height: calc(5vh + 20vh);
+			width: 60vw;
+
+			position: relative;
+		}
+		.atl-a {
+			min-height: max-content;
+			width: 60vw;
+		}
+		@keyframes display {
+			0% {
+			transform: translateX(14rem);
+			opacity: 0;
+			}
+			10% {
+			transform: translateX(0);
+			opacity: 1;
+			}
+			20% {
+			transform: translateX(0);
+			opacity: 1;
+			}
+			30% {
+			transform: translateX(-14rem);
+			opacity: 0;
+			}
+			100% {
+			transform: translateX(-14rem);
+			opacity: 0;
+			}
+		}
+		.imbx-a > img {
+			object-fit: cover;
+			position: absolute;
+			height: 20vh;
+			width: 14rem;
+			top: 0;
+			left: calc(50% - 7rem);
+			opacity: 0;
+			border-radius: var(--br-base);
+			animation: display 10s infinite;
+		}
+		img:nth-child(2) {
+			animation-delay: 2s;
+		}
+		img:nth-child(3) {
+			animation-delay: 4s;
+		}
+		img:nth-child(4) {
+			animation-delay: 6s;
+		}
+		img:nth-child(5) {
+			animation-delay: 8s;
+		}
+}
+
+/* BIGGER THAN TABLET */
+@media screen and (min-width: 768px) {
+	.main-main {
+		width: 80vw;
+
+		display: flex;
+		flex-direction: row;
+			/* vertical */
+			align-items: center;
+			/* horizontal */
+			justify-content: space-between;
+		gap: 6rem;
+	}
+	/* ANIMATION */
+		/* ARTICLE IMAGE AUTO SLIDE TRANSITION */
+		.imbx-a {
+			position: relative;
+			height: 50vh;
+			width: 17vw;
+		}
+		.atl-a {
+			min-height: max-content;
+			width: 57vw;
+		}
+		@keyframes display {
+			0% {
+			transform: translateX(14rem);
+			opacity: 0;
+			}
+			10% {
+			transform: translateX(0);
+			opacity: 1;
+			}
+			20% {
+			transform: translateX(0);
+			opacity: 1;
+			}
+			30% {
+			transform: translateX(-14rem);
+			opacity: 0;
+			}
+			100% {
+			transform: translateX(-14rem);
+			opacity: 0;
+			}
+		}
+		.imbx-a > img {
+			object-fit: cover;
+			position: absolute;
+			height: 50vh;
+			width: 14rem;
+			top: 2vh;
+			left: calc(70% - 7rem);
+			opacity: 0;
+			animation: display 10s infinite;
+			border-radius: var(--br-base);
+		}
+		img:nth-child(2) {
+			animation-delay: 2s;
+		}
+		img:nth-child(3) {
+			animation-delay: 4s;
+		}
+		img:nth-child(4) {
+			animation-delay: 6s;
+		}
+		img:nth-child(5) {
+			animation-delay: 8s;
+		}
+}

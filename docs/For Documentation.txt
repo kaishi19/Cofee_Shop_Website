@@ -1,0 +1,37 @@
+1. A brief summary of the website 
+      including: the purpose, key features, and benefits of the website you developed.
+
+The Cozy Cafe, our website, allows the anyone to quickly create an account and reserve your very own table to enjoy our best tasting coffee, tea, and pastries inside our comfy, warm, and cozy cafe. 
+
+The purpose: The purpose of this website is to conveniently bring our reservation to you. We created ways to help our customers create their very own reservations and let them manage their created reservations.
+
+Key features:
+      Client side: 
+      Create reservations
+      Select specific date and time for reservations
+      Management of existing reservations
+      Request for reservation cancellation
+      Track reservation dates
+      GCash supported payment transactions
+      Informative online receipts
+      Viewing of customer reviews
+
+
+      Admin side:
+      (All the client side)
+      Management of reservation requests
+      Management of reservation cancellations
+      Viewing of reservation statistics (Daily, Weekly, Monthly, Yearly)
+
+Sign-up and Sign-in
+Easily manageable design
+
+Benefits of the website you developed:
+      Convenient creation of reservations
+      Easily trackable reservations
+      Seemless reqeusting of cancellation of reservation
+      Payment transactions are supported by GCash
+      Dynamic tracking of reservation requests
+      Dynamic tracking of reservation cancellations
+      Seemless approving and denying of reservation related requests
+      Accurate viewing of reservation stastics

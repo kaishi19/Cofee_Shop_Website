@@ -1,0 +1,581 @@
+/* VARIABLES */
+:root {
+    --url-bg-sec-a: linear-gradient(hsla(28, 59%, 11%, 0.7), hsla(28, 59%, 11%, 0.7)), url(https://images.squarespace-cdn.com/content/v1/583cad87d1758e46ff25a477/1494622306207-E3WWGHL9WANM0YC9DCU8/BellSprinkles.gif?format=150w);
+    --url-bg-sec-c: linear-gradient(hsla(28, 59%, 11%, 0.2), hsla(28, 59%, 11%, 0.2)), url("../assoc/img/book_table.png");
+}
+
+/* ELEMENTS & CLASSES */
+.book-tbl-list {
+    position: relative;
+}
+.sec-a {
+    background: var(--url-bg-sec-a);
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+
+    padding: 2rem;
+
+    min-height: max-content;
+}
+.sec-b {
+    min-height: max-content;
+    background: var(--url-bg-sec-a);
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    padding: 2rem;
+
+    min-height: max-content;
+}
+.sec-b h1 {
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-xh);
+    color: var(--white);
+    text-align: center;
+}
+.sec-b .book-form, .book-form .fr {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-self: center; 
+}
+.sec-b .book-form {
+    gap: 1rem;
+}
+.sec-b .book-form {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    width: max-content;
+    flex-flow: nowrap column;
+    background-color: var(--c-e);
+    border-radius: var(--br-base);
+    box-shadow: var(--shadow);
+}
+.sec-b h3 {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-h);
+    color: var(--black);
+}
+.sec-b input, .sec-b select {
+    margin: .5rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+    width: 100%;
+
+    align-self: center;
+    text-align: center; 
+
+    background-color: var(--lightest-brown);
+    color: var(--black);
+    font-size: var(--fs-xs);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+}
+.sec-b button {
+    margin: 1.8rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+    width: 100%;
+
+    align-self: center;
+
+    background-color: var(--brown);
+    color: var(--c-f-nav);
+
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-h);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--tr-base);
+}
+.sec-b .book-tbl-list {
+    display: flex;
+    flex-flow: nowrap column;
+}
+.book-tbl-list ul {
+    position: absolute;
+    top: 0;
+}
+.sec-a .rsvs-t, .sec-a .rsvs-p {
+    text-align: center;
+}
+.rsvs-t {
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-xh);
+    color: var(--white);
+}
+.rsvs-cdbx {
+    margin: .6rem 0;
+    padding: 0.6rem 0;
+    min-height: min-content;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+        /* vertical */
+    align-items: space-between;
+        /* horizontal */
+    justify-content: center;
+}
+.rsvs-cdbx .cd-a {
+    width: 100vw;
+}
+.rsvs-cdbx .cd-a p {
+    color: var(--c-a);
+}
+.rsvs-cdbx .cd {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .6rem;
+    min-height: max-content;
+    background-color: var(--c-e);
+    border-radius: var(--br-base);
+    box-shadow: var(--shadow);
+}
+.rsvs-cdbx .cd .cd-hdr {
+    width: 100%;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.rsvs-cdbx .cd .cd-gc {
+    align-self: center;
+}
+.cd-gc form { 
+    display: flex;
+    flex-direction: column;
+}
+.rsvs-cdbx .cd h3 {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-h);
+
+    color: var(--black);
+}
+.rsvs-cdbx .cd p {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-n);
+    color: var(--c-f);
+}
+.rsvs-cdbx .cd p.seats {
+    color: var(--brown);
+}
+.rsvs-cdbx .cd .cd-fxbx {
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.rsvs-cdbx .cd p.datetime, .rsvs-cdbx .cd p.duration, .rsvs-cdbx .cd p.status, .rsvs-cdbx .cd p.client, .rsvs-cdbx .cd p.reserve, .rsvs-cdbx .cd p.gcash  {
+    font-weight: var(--fw-h);
+    color: var(--black);
+}
+.rsvs-cdbx .cd a {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-n);
+    color: var(--brown);
+    align-self: center;
+    text-align: center;
+    line-height: 2rem;
+
+    transition: .3s;
+}
+.rsvs-cdbx .cd a:hover {
+    color: var(--white);
+}
+.rsvs-cdbx .cd a:after {
+    background-color: var(--white);
+}
+.sec-a .fr input {
+    margin: .5rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+    width: 100%;
+
+    align-self: center;
+
+    background-color: var(--lightest-brown);
+    color: var(--black);
+    font-size: var(--fs-xs);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+    
+}
+.sec-a .fr input[type=number] {
+    appearance: textfield;
+}
+.sec-a input:focus {
+    background-color: var(--darkest-brown);
+    color: var(--white);
+}
+.sec-a button {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+    width: 75%;
+
+    align-self: center;
+
+    background-color: var(--brown);
+    color: var(--c-f-nav);
+
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-h);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--tr-base);
+}
+.sec-a button:hover {
+    background-color: var(--c-bg-navsc);
+    color: var(--c-f-nav);
+}
+.sec-c {
+    height: 100vh;
+
+    background: var(--url-bg-sec-c);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: var(--p-sec-a);
+    
+    min-height: var(--h-flban); 
+}
+.sec-c div ul li {
+    width: 100%;
+}
+.tbList {
+    z-index: 1;
+}
+img.rsrv-layout {
+    object-fit: cover;
+    margin: 1rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: var(--br-base);
+    opacity: .7;
+}
+.cdbx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+}
+.book-tbl-list input[type=radio] {
+    display: none;
+}
+.book-tbl-list h3 {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-h);
+    color: var(--black);
+}
+.book-tbl-list p {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-n);
+    color: var(--c-f);
+}
+p.tt-p {
+    font-weight: var(--fw-h);
+    color: var(--black);
+}
+.cdbx .cd {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    min-height: max-content;
+    height: 30rem;
+    width: 20rem;
+
+    position: absolute;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .6rem;
+
+
+    background-color: var(--c-e);
+    border-radius: var(--br-base);
+    box-shadow: var(--shadow);
+
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+.cd-cont a {
+    font-size: var(--fs-s);
+    font-weight: var(--fw-n);
+    color: var(--brown);
+    align-self: center;
+    text-align: center;
+    line-height: 2rem;
+    transition: .3s;
+}
+.cd-cont a:hover {
+    color: var(--white);
+}
+.cd-cont a:after {
+    background-color: var(--white);
+}
+.cd-cont-hdr {
+    width: 100%;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cd-cont-hdr p.hdr-p {
+    color: var(--brown);
+    text-align: right;
+}
+.rcpt {
+    width: 100%;
+
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    justify-content: space-between;
+}
+.btm-part {
+    width: 100%;
+
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+}
+.btm-part-p {
+    color: var(--brown);
+    font-size: var(--fs-xxs);
+}
+#in-1:checked ~ .cdbx #cd-13 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-1:checked ~ .cdbx #cd-2 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-2:checked ~ .cdbx #cd-1 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-2:checked ~ .cdbx #cd-3 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-3:checked ~ .cdbx #cd-2 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-3:checked ~ .cdbx #cd-4 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-4:checked ~ .cdbx #cd-3 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-4:checked ~ .cdbx #cd-5 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-5:checked ~ .cdbx #cd-4 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-5:checked ~ .cdbx #cd-6 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-6:checked ~ .cdbx #cd-5 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-6:checked ~ .cdbx #cd-7 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-7:checked ~ .cdbx #cd-6 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-7:checked ~ .cdbx #cd-8 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-8:checked ~ .cdbx #cd-7 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-8:checked ~ .cdbx #cd-9 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-9:checked ~ .cdbx #cd-8 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-9:checked ~ .cdbx #cd-10 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-10:checked ~ .cdbx #cd-9 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-10:checked ~ .cdbx #cd-11 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-11:checked ~ .cdbx #cd-10 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-11:checked ~ .cdbx #cd-12 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-12:checked ~ .cdbx #cd-11 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-12:checked ~ .cdbx #cd-13 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-13:checked ~ .cdbx #cd-12 {
+    transform: translatex(-90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-13:checked ~ .cdbx #cd-1 {
+    transform: translatex(90%) scale(.8);
+    opacity: .6;
+    z-index: 5;
+}
+#in-1:checked ~ .cdbx #cd-1, #in-2:checked ~ .cdbx #cd-2, #in-3:checked ~ .cdbx #cd-3, #in-4:checked ~ .cdbx #cd-4, #in-5:checked ~ .cdbx #cd-5, #in-6:checked ~ .cdbx #cd-6, #in-7:checked ~ .cdbx #cd-7, #in-8:checked ~ .cdbx #cd-8, #in-9:checked ~ .cdbx #cd-9, #in-10:checked ~ .cdbx #cd-10, #in-11:checked ~ .cdbx #cd-11, #in-12:checked ~ .cdbx #cd-12, #in-13:checked ~ .cdbx #cd-13 {
+    transform: translatex(0) scale(1);
+    opacity: .9;
+    z-index: 6;
+}
+#in-1:checked ~ .cdbx #cd-3, #in-1:checked ~ .cdbx #cd-4, #in-1:checked ~ .cdbx #cd-5, #in-1:checked ~ .cdbx #cd-6, #in-1:checked ~ .cdbx #cd-7, #in-1:checked ~ .cdbx #cd-8, #in-1:checked ~ .cdbx #cd-9, #in-1:checked ~ .cdbx #cd-10, #in-1:checked ~ .cdbx #cd-11, #in-1:checked ~ .cdbx #cd-12 {
+    display: none;
+}
+#in-2:checked ~ .cdbx #cd-4, #in-2:checked ~ .cdbx #cd-5, #in-2:checked ~ .cdbx #cd-6, #in-2:checked ~ .cdbx #cd-7, #in-2:checked ~ .cdbx #cd-8, #in-2:checked ~ .cdbx #cd-9, #in-2:checked ~ .cdbx #cd-10, #in-2:checked ~ .cdbx #cd-11, #in-2:checked ~ .cdbx #cd-12, #in-2:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-3:checked ~ .cdbx #cd-1, #in-3:checked ~ .cdbx #cd-5, #in-3:checked ~ .cdbx #cd-6, #in-3:checked ~ .cdbx #cd-7, #in-3:checked ~ .cdbx #cd-8, #in-3:checked ~ .cdbx #cd-9, #in-3:checked ~ .cdbx #cd-10, #in-3:checked ~ .cdbx #cd-11, #in-3:checked ~ .cdbx #cd-12, #in-3:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-4:checked ~ .cdbx #cd-1, #in-4:checked ~ .cdbx #cd-2, #in-4:checked ~ .cdbx #cd-6, #in-4:checked ~ .cdbx #cd-7, #in-4:checked ~ .cdbx #cd-8, #in-4:checked ~ .cdbx #cd-9, #in-4:checked ~ .cdbx #cd-10, #in-4:checked ~ .cdbx #cd-11, #in-4:checked ~ .cdbx #cd-12, #in-4:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-5:checked ~ .cdbx #cd-1, #in-5:checked ~ .cdbx #cd-2, #in-5:checked ~ .cdbx #cd-3, #in-5:checked ~ .cdbx #cd-7, #in-5:checked ~ .cdbx #cd-8, #in-5:checked ~ .cdbx #cd-9, #in-5:checked ~ .cdbx #cd-10, #in-5:checked ~ .cdbx #cd-11, #in-5:checked ~ .cdbx #cd-12, #in-5:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-6:checked ~ .cdbx #cd-1, #in-6:checked ~ .cdbx #cd-2, #in-6:checked ~ .cdbx #cd-3, #in-6:checked ~ .cdbx #cd-4, #in-6:checked ~ .cdbx #cd-8, #in-6:checked ~ .cdbx #cd-9, #in-6:checked ~ .cdbx #cd-10, #in-6:checked ~ .cdbx #cd-11, #in-6:checked ~ .cdbx #cd-12, #in-6:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-7:checked ~ .cdbx #cd-1, #in-7:checked ~ .cdbx #cd-2, #in-7:checked ~ .cdbx #cd-3, #in-7:checked ~ .cdbx #cd-4, #in-7:checked ~ .cdbx #cd-5, #in-7:checked ~ .cdbx #cd-9, #in-7:checked ~ .cdbx #cd-10, #in-7:checked ~ .cdbx #cd-11, #in-7:checked ~ .cdbx #cd-12, #in-7:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-8:checked ~ .cdbx #cd-1, #in-8:checked ~ .cdbx #cd-2, #in-8:checked ~ .cdbx #cd-3, #in-8:checked ~ .cdbx #cd-4, #in-8:checked ~ .cdbx #cd-5, #in-8:checked ~ .cdbx #cd-6, #in-8:checked ~ .cdbx #cd-10, #in-8:checked ~ .cdbx #cd-11, #in-8:checked ~ .cdbx #cd-12, #in-8:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-9:checked ~ .cdbx #cd-1, #in-9:checked ~ .cdbx #cd-2, #in-9:checked ~ .cdbx #cd-3, #in-9:checked ~ .cdbx #cd-4, #in-9:checked ~ .cdbx #cd-5, #in-9:checked ~ .cdbx #cd-6, #in-9:checked ~ .cdbx #cd-7, #in-9:checked ~ .cdbx #cd-11, #in-9:checked ~ .cdbx #cd-12, #in-9:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-10:checked ~ .cdbx #cd-1, #in-10:checked ~ .cdbx #cd-2, #in-10:checked ~ .cdbx #cd-3, #in-10:checked ~ .cdbx #cd-4, #in-10:checked ~ .cdbx #cd-5, #in-10:checked ~ .cdbx #cd-6, #in-10:checked ~ .cdbx #cd-7, #in-10:checked ~ .cdbx #cd-8, #in-10:checked ~ .cdbx #cd-12, #in-10:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-11:checked ~ .cdbx #cd-1, #in-11:checked ~ .cdbx #cd-2, #in-11:checked ~ .cdbx #cd-3, #in-11:checked ~ .cdbx #cd-4, #in-11:checked ~ .cdbx #cd-5, #in-11:checked ~ .cdbx #cd-6, #in-11:checked ~ .cdbx #cd-7, #in-11:checked ~ .cdbx #cd-8, #in-11:checked ~ .cdbx #cd-9, #in-11:checked ~ .cdbx #cd-13 {
+    display: none;
+}
+#in-12:checked ~ .cdbx #cd-1, #in-12:checked ~ .cdbx #cd-2, #in-12:checked ~ .cdbx #cd-3, #in-12:checked ~ .cdbx #cd-4, #in-12:checked ~ .cdbx #cd-5, #in-12:checked ~ .cdbx #cd-6, #in-12:checked ~ .cdbx #cd-7, #in-12:checked ~ .cdbx #cd-8, #in-12:checked ~ .cdbx #cd-9, #in-12:checked ~ .cdbx #cd-10 {
+    display: none;
+}
+#in-13:checked ~ .cdbx #cd-2, #in-13:checked ~ .cdbx #cd-3, #in-13:checked ~ .cdbx #cd-4, #in-13:checked ~ .cdbx #cd-5, #in-13:checked ~ .cdbx #cd-6, #in-13:checked ~ .cdbx #cd-7, #in-13:checked ~ .cdbx #cd-8, #in-13:checked ~ .cdbx #cd-9, #in-13:checked ~ .cdbx #cd-10, #in-13:checked ~ .cdbx #cd-11 {
+    display: none;
+}
+
+/* SMALLER THAN SMALL CP */
+@media screen and (max-width: 319px) {
+
+}
+
+/* SMALLER THAN LARGE CP */
+@media screen and (max-width: 425px) {
+    .rsvs-cdbx .cd {
+        min-height: 20vh;
+        max-height: min-content;
+        max-width: 80vw;
+    }
+    .book-tbl-list .cd {
+        min-height: 20vh;
+        max-height: min-content;
+        max-width: 40vw;
+    }
+}
+
+/* SMALLER THAN TABLET */
+@media screen and (max-width: 767px) {
+}
+
+/* BIGGER THAN TABLET */
+@media screen and (min-width: 768px) {
+    .rsvs-cdbx .cd {
+        min-height: 20vh;
+        max-height: min-content;
+        max-width: 40vw;
+    }
+}

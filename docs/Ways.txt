@@ -1,0 +1,36 @@
+// CSS
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+.dark-mode {
+  --background-color: #000;
+  --text-color: #fff;
+}
+
+// javaScript
+function enableDarkMode() {
+  document.documentElement.style.setProperty('--background-color', '#000');
+  document.documentElement.style.setProperty('--text-color', '#fff');
+}
+
+function disableDarkMode() {
+  document.documentElement.style.setProperty('--background-color', '#fff');
+  document.documentElement.style.setProperty('--text-color', '#000');
+}
+
+// Enable or disable dark mode
+
+var darkModeEnabled = false;
+
+function toggleDarkMode() {
+  darkModeEnabled = !darkModeEnabled;
+  
+  if (darkModeEnabled) {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+}

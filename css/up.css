@@ -1,0 +1,120 @@
+/* VARIABLES */
+:root {
+    /* BACKGROUND IMAGE URLS */
+    --url-bg-sec-a: linear-gradient(hsla(28, 59%, 11%, 0.7), hsla(28, 59%, 11%, 0.7)), url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ea470165273771.5b8296ec11e2c.gif);
+
+
+}
+
+/* ELEMENTS & CLASSES */
+.sec-a {
+    background: var(--url-bg-sec-a);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    min-height: min-content;
+    padding: 5rem 0;
+}
+.sec-a .frbx {
+    padding: 5vh 2rem;
+    height: min-content;
+
+    position: relative;
+
+    background-color: var(--c-frbx-a);
+
+    border-radius: var(--br-base);
+
+    box-shadow: var(--shadow);
+}
+.sec-a .fr .fxbx-g, .sec-a .fr .fxbx-g input {
+    width: 100%;
+}
+.sec-a .fr {
+    gap: .6rem;
+}
+.sec-a .fr input {
+    margin: .5rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+
+    background-color: var(--lightest-brown);
+    color: var(--black);
+    font-size: var(--fs-xs);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+}
+.sec-a .fr .fxbx-g .fr-lbl {
+    color: var(--lighter-brown);
+
+    font-size: var(--fs-n);
+    font-weight: var(--fw-h);
+}
+.sec-a input:focus {
+    background-color: var(--darkest-brown);
+    color: var(--white);
+}
+.sec-a .err {
+    padding: .2rem 0;
+    color: var(--black);
+
+    font-size: 1rem;
+}
+.sec-a button {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    height: 2.5rem;
+    width: 100%;
+
+    background-color: var(--brown);
+    color: var(--c-f-nav);
+
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-h);
+
+    border-radius: 100px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--tr-base);
+}
+.sec-a button:hover {
+    background-color: var(--c-bg-navsc);
+    color: var(--c-f-nav);
+}
+.sec-a a {
+    color: var(--lightest-brown);
+    font-size: var(--fs-xs);
+
+    text-align: center;
+
+    transition: var(--tr-base);
+}
+.sec-a a:hover {
+    color: var(--black);
+}
+
+/* SMALLER THAN SMALL CP */
+@media screen and (max-width: 319px) {
+}
+
+/* SMALLER THAN LARGE CP */
+@media screen and (max-width: 425px) {
+    .frbx {
+        width: 80vw;
+    }
+}
+
+/* SMALLER THAN TABLET */
+@media screen and (max-width: 767px) {
+}
+
+/* BIGGER THAN TABLET */
+@media screen and (min-width: 768px) {
+    .frbx {
+        width: 35vw;
+    }
+}

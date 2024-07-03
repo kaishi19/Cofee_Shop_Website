@@ -1,0 +1,27 @@
+        <div class="book-form">
+            <form action="book.php" method="POST">
+                <label for="date">Date:</label>
+                <?php
+                    $currentDate = date("Y-m-d");
+                    echo '<input id="date" type="date" name="date" value="'.$currentDate.'" min="'.$currentDate.'" required>';
+                ?>
+                <label for="time">Time:</label>
+                <select id="time" name="time" required>
+                    <option disabled selected>Choose a time</option>
+                    <?php
+                        $currentTime = intval(date("G"));
+                        $startTime = max(6, $currentTime + 1); 
+                        $endTime = 21; 
+
+                        for ($i = $startTime; $i <= $endTime; $i++) {
+                            $displayHour = ($i % 12 === 0) ? 12 : ($i % 12);
+                            $time = $displayHour . ":00 " . (($i >= 12 && $i !== 24) ? "PM" : "AM");
+                            echo '<option value="'.$i.'">'.$time.'</option>';
+                        }
+                    ?>
+                </select>
+                <label for="ppl">People:</label>
+                <input id="ppl" type="number" name="ppl" value="<?php echo $ppl ?>" min="1" max="12" required>
+                <button type="submit" name="action" value="submit">Check availability</button>
+            </form>
+        </div>
